@@ -1,0 +1,30 @@
+{
+  "name": "image-data-uri",
+  "version": "1.0.0",
+  "description": "Library to easily decode/encode Data URI images",
+  "main": "./lib/image-data-uri.js",
+  "dependencies": {
+    "fs-extra": "^0.26.7",
+    "request": "^2.69.0"
+  },
+  "author": {
+    "name": "Diego ZoracKy",
+    "email": "diego.zoracky@gmail.com",
+    "url": "diegozoracky.com",
+    "twitter": "@diegozoracky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/DiegoZoracKy/image-data-uri.git"
+  },
+  "bugs": "https://github.com/DiegoZoracKy/image-data-uri/issues",
+  "keywords": [
+    "image",
+    "data uri",
+    "image data uri",
+    "base 64",
+    "image base 64",
+    "data uri base 64"
+  ],
+  "license": "MIT"
+}
