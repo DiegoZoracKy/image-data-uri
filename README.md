@@ -14,6 +14,7 @@ npm install image-data-uri
 - **decode(dataURI)**
 ```javascript
 imageDataURI.decode('data:image/png;base64,SOMEPNGDATAURI/wD/')
+
 // RETURNS
 {
     imageType: 'png',
@@ -26,8 +27,10 @@ imageDataURI.decode('data:image/png;base64,SOMEPNGDATAURI/wD/')
 ```javascript
 // Expects a Buffer of a image file
 let dataBuffer = new Buffer(imageData);
+
 // PNG | GIF | etc.
 let mediaType = 'PNG';
+
 // RETURNS :: image data URI :: 'data:image/png;base64,PNGDATAURI/wD/'
 imageDataURI.encode(dataBuffer, mediaType)
 ```
@@ -36,6 +39,7 @@ imageDataURI.encode(dataBuffer, mediaType)
 ```javascript
 // Returns a Promise
 imageDataURI.encodeFromURL('http://www.some-site.com/some-image.png')
+
     // RETURNS image data URI :: 'data:image/png;base64,PNGDATAURI/'
     .then(res => console.log(res))
 ```
@@ -43,6 +47,7 @@ imageDataURI.encodeFromURL('http://www.some-site.com/some-image.png')
 ```javascript
 // Returns a Promise
 imageDataURI.encodeFromFile('./some-file.png')
+
     // RETURNS image data URI :: 'data:image/png;base64,PNGDATAURI/'
     .then(res => console.log(res))
 ```
@@ -50,10 +55,13 @@ imageDataURI.encodeFromFile('./some-file.png')
 ```javascript
 // Some image data uri
 let dataURI = 'data:image/png;base64,PNGDATAURI/';
+
 // It will create the full path in case it doesn't exist
 let filePath = './out/path/fileName';
+
 // Returns a Promise
 imageDataURI.outputFile(dataURI, filePath)
+
     // RETURNS image path of the created file 'out/path/fileName.png'
     .then(res => console.log(res))
 ```
