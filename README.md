@@ -2,8 +2,6 @@
 
 Library to easily decode/encode Data URI images
 
-Gets an object literal with a desired API's structure and based on it, creates a well defined interface to handle http calls (request()). Inspired by the jQuery version that i created a long time ago:
-
 ## Install
 
 ### NPM / Node
