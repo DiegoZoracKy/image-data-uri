@@ -57,6 +57,7 @@ imageDataURI.encodeFromFile('./some-file.png')
 let dataURI = 'data:image/png;base64,PNGDATAURI/';
 
 // It will create the full path in case it doesn't exist
+// If the extension is defined (e.g. fileName.png), it will be preserved, otherwise the lib will try to guess from the Data URI
 let filePath = './out/path/fileName';
 
 // Returns a Promise
