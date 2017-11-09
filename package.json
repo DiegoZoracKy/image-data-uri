@@ -1,10 +1,12 @@
 {
   "name": "image-data-uri",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library to easily decode/encode Data URI images",
   "main": "./lib/image-data-uri.js",
+  "bin": "./bin/magicli.js",
   "dependencies": {
     "fs-extra": "^0.26.7",
+    "magicli": "0.0.8",
     "request": "^2.69.0"
   },
   "author": {

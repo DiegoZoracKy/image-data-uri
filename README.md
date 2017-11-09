@@ -2,11 +2,17 @@
 
 Library to easily decode/encode Data URI images
 
-## Install
+## Installation
 
-### NPM / Node
-```javascript
+```bash
 npm install image-data-uri
+```
+**CLI**
+```bash
+npm install image-data-uri -g
+```
+```bash
+npx image-data-uri --help
 ```
 
 ## Methods
