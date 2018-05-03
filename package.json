@@ -7,6 +7,7 @@
   "dependencies": {
     "fs-extra": "^0.26.7",
     "magicli": "0.0.8",
+    "mime-types": "^2.1.18",
     "request": "^2.69.0"
   },
   "author": {
@@ -28,5 +29,11 @@
     "image base 64",
     "data uri base 64"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^5.1.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
 }
