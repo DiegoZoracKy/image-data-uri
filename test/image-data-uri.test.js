@@ -1,6 +1,7 @@
-var assert = require("assert");
+const fs = require("fs-extra");
+const assert = require("assert");
 
-var ImageDataURI = require("../lib/image-data-uri");
+const ImageDataURI = require("../lib/image-data-uri");
 
 const matchMediaType = /^data:([^;,]+)[;,]/;
 
@@ -40,10 +41,17 @@ describe("ImageDataURI", () => {
   });
 
   describe("outputFile", () => {
+    const outputFilePath = `${__dirname}/tmp-output`;
+    const expectedOutputFile = `${__dirname}/tmp-output.svg`;
+
     it("writes image/svg+xml data to a file with .svg extension", () => {
       return ImageDataURI.encodeFromFile("test/test-file.svg")
-        .then(dataURI => ImageDataURI.outputFile(dataURI, "./tmp-output"))
-        .then(outputPath => assert.equal("./tmp-output.svg", outputPath));
+        .then(dataURI => ImageDataURI.outputFile(dataURI, outputFilePath))
+        .then(outputPath => assert.equal(expectedOutputFile, outputPath));
+    });
+
+    after(function() {
+      fs.removeSync(expectedOutputFile);
     });
   });
 });
