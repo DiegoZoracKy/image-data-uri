@@ -38,4 +38,12 @@ describe("ImageDataURI", () => {
       });
     });
   });
+
+  describe("outputFile", () => {
+    it("writes image/svg+xml data to a file with .svg extension", () => {
+      return ImageDataURI.encodeFromFile("test/test-file.svg")
+        .then(dataURI => ImageDataURI.outputFile(dataURI, "./tmp-output"))
+        .then(outputPath => assert.equal("./tmp-output.svg", outputPath));
+    });
+  });
 });
