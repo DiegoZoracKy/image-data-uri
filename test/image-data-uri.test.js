@@ -40,6 +40,21 @@ describe("ImageDataURI", () => {
     });
   });
 
+  describe("encodeFromURL", () => {
+    it("declares correct media type for a google logo", () => {
+      return ImageDataURI.encodeFromURL("https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png").then(dataURI => {
+        const m = dataURI.match(matchMediaType);
+        assert.equal("image/png", m[1]);
+      });
+    });
+    it("fails on a 404 URL", () => {
+      return ImageDataURI.encodeFromURL("http://150dcace0756dba5a895-b1479f7526781e2361a99185a4979d91.r53.cf1.rackcdn.com/library/assets/825127ec")
+        .catch(err => {
+          assert.ok(typeof err === 'string');
+        });
+    });
+  });
+
   describe("outputFile", () => {
     const outputFilePath = `${__dirname}/tmp-output`;
     const expectedOutputFile = `${__dirname}/tmp-output.svg`;
