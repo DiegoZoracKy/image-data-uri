@@ -23,7 +23,7 @@ imageDataURI.decode('data:image/png;base64,SOMEPNGDATAURI/wD/')
 
 // RETURNS
 {
-    imageType: 'png',
+    imageType: 'image/png',
     dataBase64: 'SOMEPNGDATAURI/wD/',
     dataBuffer: <Buffer 89 50 4e 47 0d 0a ...>
 }
