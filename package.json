@@ -1,6 +1,6 @@
 {
   "name": "image-data-uri",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Library to easily decode/encode Data URI images",
   "main": "./lib/image-data-uri.js",
   "bin": "./bin/magicli.js",
@@ -13,7 +13,7 @@
   "author": {
     "name": "Diego ZoracKy",
     "email": "diego.zoracky@gmail.com",
-    "url": "diegozoracky.com",
+    "url": "https://github.com/DiegoZoracKy/",
     "twitter": "@diegozoracky"
   },
   "repository": {
