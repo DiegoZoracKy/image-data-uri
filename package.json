@@ -4,6 +4,7 @@
   "description": "Library to easily decode/encode Data URI images",
   "main": "./lib/image-data-uri.js",
   "bin": "./bin/magicli.js",
+  "types": "./lib/image-data-uri.d.ts"
   "dependencies": {
     "fs-extra": "^0.26.7",
     "magicli": "0.0.8",
